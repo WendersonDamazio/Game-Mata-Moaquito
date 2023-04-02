@@ -18,14 +18,14 @@
             <img id="V3" src="imagens/coracao_cheio.png">
         </div>
         <div class="cronometro">
-            Tempo restante: ?
+            Tempo restante: <span id="cronometro"></span>?
         </div>
     </div>
     
     <script>
-        posicaoRandomica()
+        document.getElementById('cronometro').innerHTML = tempo
 
-        setInterval(function(){
+        let criarMosquito = setInterval(function(){
             posicaoRandomica()
         }, 1000)
     </script>
