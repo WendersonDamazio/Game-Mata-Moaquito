@@ -3,7 +3,22 @@
 let altura = 0 
 let largura = 0 
 let vidas = 1
-let tempo = 10
+let tempo = 0
+let criarMosquitoTempo = 0
+
+let nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if(nivel === 'normal'){
+    criarMosquitoTempo = 1500
+    tempo = 20
+}else if(nivel === 'dificil'){
+    criarMosquitoTempo = 1000
+    tempo = 25
+}else if(nivel === 'chucknorris'){
+    criarMosquitoTempo = 750
+    tempo = 30
+}
 
 function ajustaTamanhoPalcoJogo(){
     altura = window.innerHeight
